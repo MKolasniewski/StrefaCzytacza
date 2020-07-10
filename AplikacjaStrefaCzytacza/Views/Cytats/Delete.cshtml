@@ -1,0 +1,56 @@
+﻿@model AplikacjaStrefaCzytacza.Models.Cytat
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2></h2>
+
+<h3>Czy na pewno chcesz usunąć cytat?</h3>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kategoria.NazwaKategorii)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kategoria.NazwaKategorii)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TekstCytatu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TekstCytatu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NazwaKsiazki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazwaKsiazki)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AutorCytatu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AutorCytatu)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="usuń" class="btn btn-default" /> |
+            @Html.ActionLink("Wróć do listy cytatów", "Index")
+        </div>
+    }
+</div>

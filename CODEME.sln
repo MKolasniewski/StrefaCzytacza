@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplikacjaStrefaCzytacza", "AplikacjaStrefaCzytacza\AplikacjaStrefaCzytacza.csproj", "{1477D7B3-27A2-42C0-9999-FEA403321CB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1477D7B3-27A2-42C0-9999-FEA403321CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1477D7B3-27A2-42C0-9999-FEA403321CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1477D7B3-27A2-42C0-9999-FEA403321CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1477D7B3-27A2-42C0-9999-FEA403321CB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18BB2F5F-4B19-4D74-A404-B20F1DF1AF94}
+	EndGlobalSection
+EndGlobal

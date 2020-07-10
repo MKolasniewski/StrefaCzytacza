@@ -1,0 +1,58 @@
+﻿@model AplikacjaStrefaCzytacza.Models.Ksiazka
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2></h2>
+
+<div>
+    <h4>Szczegóły</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kategoria.NazwaKategorii)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kategoria.NazwaKategorii)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NazwaKsiazki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazwaKsiazki)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisKsiazki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisKsiazki)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Autorksiazki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Autorksiazki)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OcenaKsiazki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OcenaKsiazki)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Wróć do listy kategorii", "Index")
+</p>

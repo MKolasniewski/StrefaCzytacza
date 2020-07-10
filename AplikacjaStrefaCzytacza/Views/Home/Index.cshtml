@@ -1,0 +1,38 @@
+﻿@model AplikacjaStrefaCzytacza.ViewModel.HomeViewModel
+
+@{
+    ViewBag.Title = "Strefa Czytacza - Witamy!";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="@Url.Content("~/Content/Images/Wartoprzeczytac.png")" class="center-block" />
+
+        @foreach (var ksiazki in Model.Ksiazki)
+        {
+
+            <p> @ksiazki.NazwaKsiazki - @ksiazki.Autorksiazki</p>
+        }
+
+
+    </div>
+    <div class="col-md-4">
+        <img src="@Url.Content("~/Content/Images/Cytat.png")" class="center-block" />
+
+        @foreach (var cytaty in Model.Cytaty)
+        {
+            <p>@cytaty.TekstCytatu</p>
+            <p>Książka: @cytaty.NazwaKsiazki</p>
+            <p>Autor: @cytaty.AutorCytatu</p>
+        }
+    </div>
+    <div class="col-md-4">
+        <img src="@Url.Content("~/Content/Images/Kategoria.png")" class="center-block" />
+
+        @foreach (var kategorie in Model.Kategorie)
+        {
+            <p>@kategorie.NazwaKategorii</p>
+        }
+    </div>
+</div>

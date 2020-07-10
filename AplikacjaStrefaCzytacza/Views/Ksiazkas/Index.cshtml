@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AplikacjaStrefaCzytacza.Models.Ksiazka>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("Dodaj", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kategoria.NazwaKategorii)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NazwaKsiazki)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpisKsiazki)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Autorksiazki)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OcenaKsiazki)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kategoria.NazwaKategorii)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NazwaKsiazki)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpisKsiazki)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autorksiazki)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OcenaKsiazki)
+        </td>
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Szczegóły", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

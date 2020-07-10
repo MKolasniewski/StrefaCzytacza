@@ -1,0 +1,40 @@
+﻿@model AplikacjaStrefaCzytacza.Models.Kategoria
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2></h2>
+
+<h3>Czy na pewno chcesz usunąć kategorię?</h3>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NazwaKategorii)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazwaKategorii)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisKategorii)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisKategorii)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="usuń" class="btn btn-default" /> |
+            @Html.ActionLink("Wróć do listy kategorii", "Index")
+        </div>
+    }
+</div>
